@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub User Repositories</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>GitHub User Repositories</h1>
+    <input type="text" v-model="username" placeholder="Enter GitHub username" @input="fetchRepos">
+    <div v-if="repos !== null">
+      <p>{{ username }} has {{ repos }} repositories.</p>
+    </div>
+    <div v-else>
+      <p>Enter a GitHub username to see the number of repositories.</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
